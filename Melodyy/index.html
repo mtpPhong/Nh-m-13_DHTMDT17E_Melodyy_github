@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Nhạc số Melodyy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nhạc số Melodyy</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link rel="icon" href="img/2.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+<style>
+    .active_login:active .modal {
+      display: flex !important;
+    }
+    </style>
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/1.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">TRANG CHỦ</a></li>
+                                <li><a href="./index1.html">TOP 100</a></li>
+                                <li><a href="./MV.html">TOP MV</a></li>
+                                <li><a href="./about.html">Khám Phá</a></li>
+                                <li><a href="./contact.html">LIÊN HỆ</a></li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__login">
+                        <nav class="header__nav__menu mobile-menu">
+                            <button  onclick="openLoginModal()"  class="Btn">
+                                <div class="sign">
+                                  <svg viewBox="0 0 512 512">
+                                    <path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 
+                                    27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 
+                                    0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 
+                                    33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 
+                                    0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 
+                                    96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path>
+                                  </svg>
+                                </div>
+                                <div class="text">Đăng nhập</div>
+                              </button>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- form login , register -->
+
+    <div class="modal" id="registerModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+          <!-- Register form -->
+          <div class="auth-form">
+            <div class="auth-form__container">
+              <div class="auth-form__header">
+                <h3 class="auth-form__heading">Đăng ký</h3>
+                <span class="auth-form__switch-btn" onclick="openiLognModal('registerModal')">Đăng nhập</span>
+              </div>
+              <div class="auth-form__form">
+                <div class="auth-form__group">
+                  <input type="email" class="auth-form__input" placeholder="Email của bạn" />
+                </div>
+                <div class="auth-form__group">
+                  <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn" />
+                </div>
+                <div class="auth-form__group">
+                  <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu" />
+                </div>
+              </div>
+  
+              <div class="auth-form__aside">
+                <p class="auth-form__policy-text">
+                  Bằng việc đăng kí, bạn đã đồng ý với Melodyy về
+                  <a href="./about.html" class="auth-form__text-link" target="_blank">Điều khoản dịch vụ</a> &
+<a href="./about.html" class="auth-form__text-link" target="_blank">Chính sách bảo mật</a>
+                </p>
+              </div>
+              <div class="auth-form__controls">
+                <button class="btn btn--normal auth-form__controls-back" onclick="closeModal('registerModal')">ĐÓNG</button>
+                <button class="btn btn--primary"  onclick="increset1()" >ĐĂNG KÝ</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="loginModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+  
+          <!-- Login form -->
+          <div class="card">
+            <div class="card2">
+              <div class="form">
+              <h1 id="heading">Đăng nhập</h1>
+              <div class="field">
+              <svg viewBox="0 0 16 16" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="input-icon">
+              <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 
+              1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 
+              0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4
+               0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 
+               0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 
+               0-1.442-.725-1.442-1.914z"></path>
+              </svg>
+                <input type="email" class="input-field" placeholder="Username" autocomplete="off">
+              </div>
+              <div class="field">
+              <svg viewBox="0 0 16 16" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="input-icon">
+              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 
+              0 0 0-2-2z"></path>
+              </svg>
+                <input type="password" class="input-field" placeholder="Password">
+              </div>
+              <div class="btn">
+              <button class="button1" onclick="increset1()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              <button class="button2" onclick="openRiegsterModal('loginModal')">Đăng kí</button>
+
+              </div>
+              <button class="button3">Quên mật khẩu</button>
+              <button class="button2" onclick="closeModal()">Đóng</button>
+              </div>
+            </div>
+              </div>>
+          </div>
+
+
+          <div class="modal" id="registerModal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+              <!-- Register form -->
+              <div class="auth-form">
+                <div class="auth-form__container">
+                  <div class="auth-form__header">
+                    <h3 class="auth-form__heading">Đăng ký</h3>
+                    <span class="auth-form__switch-btn" onclick="openLoginModal('registerModal')">Đăng nhập</span>
+                  </div>
+                  <div class="auth-form__form">
+                    <div class="auth-form__group">
+                      <input type="email" class="auth-form__input" placeholder="Email của bạn" />
+                    </div>
+                    <div class="auth-form__group">
+                      <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn" />
+                    </div>
+                    <div class="auth-form__group">
+                      <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu" />
+                    </div>
+                  </div>
+      
+                  <div class="auth-form__aside">
+                    <p class="auth-form__policy-text">
+                      Bằng việc đăng kí, bạn đã đồng ý với Melodyy về
+                      <a href="./about.html" class="auth-form__text-link" target="_blank">Điều khoản dịch vụ</a> &
+    <a href="./about.html" class="auth-form__text-link" target="_blank">Chính sách bảo mật</a>
+                    </p>
+                  </div>
+                  <div class="auth-form__controls">
+                    <button class="btn btn--normal auth-form__controls-back" onclick="closeModal('registerModal')">ĐÓNG</button>
+                    <button class="btn btn--primary" onclick="openLoginModal()" >ĐĂNG KÝ</button>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="hero__slider owl-carousel">
+            <div class="hero__item set-bg" data-setbg="img/hero/3.png">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <span>VPOP</span>
+                                <h2>HITS QUỐC DÂN</h2>
+                                <a href="#" class="primary-btn">KHÁM PHÁ NGAY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item set-bg" data-setbg="img/hero/1.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <span>PHONG CÁCH GIỚI TRẺ</span>
+                                <h2>TRÀO LƯU TIKTOK</h2>
+                                <a href="#" class="primary-btn">KHÁM PHÁ NGAY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item set-bg" data-setbg="img/hero/3.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <span>BOLERO</span>
+                                <h2>NỔI NIỀM GIAI ĐIỆU XƯA</h2>
+                                <a href="#" class="primary-btn">CÙNG NGHE NÀO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+    <!--test-->
+    <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="image-gallery">
+                <a href="#">
+                  <div class="gallery-item" style="background-image: url('img/pt/2.png')">
+                    <div class="gallery-item-text">
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="image-gallery">
+                <a href="./index1.html">
+                  <div class="gallery-item" style="background-image: url('img/pt/1.png')">
+                    <div class="gallery-item-text">
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="image-gallery">
+                <a href="#">
+                  <div class="gallery-item" style="background-image: url('img/pt/3.png')">
+                    <div class="gallery-item-text">
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      </section>
+    <!-- Work Section Begin -->
+     <section class="work">
+        <div class="section-title center-title">
+            <span>MỚI NHẤT</span>
+            <h2>TOP MV 2024</h2>
+        </div>
+        <div class="work__gallery">
+            <div class="grid-sizer"></div>
+            <div class="work__item wide__item set-bg" data-setbg="img/work/8.jpg">
+                <a href="https://www.youtube.com/watch?v=rwIOCoDtHyI" class="play-btn video-popup"><i
+                        class="fa fa-play"></i></a>
+                <div class="work__item__hover">
+                    <h4>VỤ NỔ LỚN - KHÔNG QUAN TRỌNG</h4>
+                    <ul>
+                        <li>MCK ft. ORIJINN, TAGE , JUSTATEE , TRUNG TRẦN
+                            CU CHÍNH, CU ĐẠT, HOÀNG VĂNN</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="work__item small__item set-bg" data-setbg="img/work/1.jpg">
+                <a href="https://www.youtube.com/watch?v=OrDB4jpA1g8" class="play-btn video-popup"><i
+                        class="fa fa-play"></i></a>
+                        <div class="work__item__hover">
+                            <h4>THIÊN LÝ ƠI</h4>
+                            <ul>
+                                <li>JACK - J97</li>
+                            </ul>
+                        </div>
+            </div>
+            <div class="work__item small__item set-bg" data-setbg="img/work/4.jpg">
+                <a href="https://www.youtube.com/watch?v=sU8G7Q4rUA4" class="play-btn video-popup"><i
+                        class="fa fa-play"></i></a>
+                        <div class="work__item__hover">
+                            <h4>Nâng Chén Tiêu Sầu</h4>
+                            <ul>
+                                <li>BÍCH PHƯƠNG</li>
+                            </ul>
+                        </div>
+            </div>
+            <div class="work__item large__item set-bg" data-setbg="img/work/2.jpg">
+                <a href="https://www.youtube.com/watch?v=mzqvF_rIOx8" class="play-btn video-popup"><i
+                        class="fa fa-play"></i></a>
+                <div class="work__item__hover">
+                    <h4>SAU LỜI TỪ KHƯỚC</h4>
+                    <ul>
+                        <li>PHAN MẠNH QUỲNH</li>
+                        <li>(OST phim MAI)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="work__item small__item set-bg" data-setbg="img/work/5.jpeg">
+                <a href="https://www.youtube.com/watch?v=8rt1v_1i0mI" class="play-btn video-popup"><i
+                        class="fa fa-play"></i></a>
+                        <div class="work__item__hover">
+                            <h4>TỪNG LÀ</h4>
+                            <ul>
+                                <li>VŨ CÁT TƯỜNG</li>
+                            </ul>
+                        </div>
+            </div>
+            <div class="work__item small__item set-bg" data-setbg="img/work/7.jpg">
+                <a href="https://www.youtube.com/watch?v=ROTZbg4a99o" class="play-btn video-popup"><i
+                        class="fa fa-play"></i></a>
+                        <div class="work__item__hover">
+                            <h4>Dành Hết Xuân Thì Để Chờ Nhau</h4>
+                            <ul>
+                                <li>Vũ. feat. Hà Anh Tuấn</li>
+                            </ul>
+                        </div>
+            </div>
+            <div class="work__item wide__item set-bg" data-setbg="img/work/3.jpg">
+                <a href="https://www.youtube.com/watch?v=zoEtcR5EW08" class="play-btn video-popup"><i
+                        class="fa fa-play"></i></a>
+                <div class="work__item__hover">
+                    <h4>CHÚNG TA CỦA TƯƠNG LAI</h4>
+                    <ul>
+                        <li>SƠN TÙNG M-TP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Work Section End -->
+    <!-- Team Section Begin -->
+    <section class="team spad set-bg" data-setbg="img/team-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title team__title">
+                        <span>CA SĨ</span>
+                        <h2>ĐƯỢC YÊU THÍCH NHẤT</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                    <div class="team__item set-bg" data-setbg="img/team/1.jpg">
+                        <div class="team__item__text">
+                            <h4>Sơn Tùng MT-P</h4>
+                            <p>Ca sĩ</p>
+                            <div class="team__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                    <div class="team__item team__item--second set-bg" data-setbg="img/team/2.jpg">
+                        <div class="team__item__text">
+                            <h4>Phan Mạnh Quỳnh</h4>
+                            <p>Ca sĩ</p>
+                            <div class="team__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                    <div class="team__item team__item--third set-bg" data-setbg="img/team/3.jpg">
+                        <div class="team__item__text">
+                            <h4>HIEUTHUHAI</h4>
+                            <p>Rapper</p>
+                            <div class="team__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                    <div class="team__item team__item--four set-bg" data-setbg="img/team/4.jpg">
+                        <div class="team__item__text">
+                            <h4>Mỹ Tâm</h4>
+                            <p>Ca sĩ</p>
+                            <div class="team__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 p-0">
+                    <div class="team__btn">
+                        <a href="#" class="primary-btn">TÌM HIỂU THÊM</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Counter Section Begin -->
+    <section class="counter">
+        <div class="container">
+            <div class="counter__content">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item__text">
+                                <img src="img/icons/ci-1.png" alt="">
+                                <h2 class="counter_num" id="counter_num">230</h2>
+                                <p>LƯỢT ĐÁNH GIÁ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item second__item">
+                            <div class="counter__item__text">
+                                <img src="img/icons/ci-2.png" alt="">
+                                <h2 class="counter_num" id="counter_num1">1068</h2>
+                                <p>NGƯỜI NGHE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item third__item">
+                            <div class="counter__item__text">
+                                <img src="img/icons/ci-3.png" alt="">
+                                <h2 class="counter_num">5630</h2>
+                                <p>LƯỢT NGHE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item four__item">
+                            <div class="counter__item__text">
+                                <img src="img/icons/ci-4.png" alt="">
+                                <h2 class="counter_num">32</h2>
+                                <p>lƯỢT TẢI XUỐNG</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Counter Section End -->
+<!--test-->
+ <!-- Testimonial Section Begin -->
+ <section class="testimonial spad set-bg" data-setbg="img/testimonial-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title center-title">
+                    <span>CẬP NHẬT MỚI NHẤT</span>
+                    <h2>ĐÁNH GIÁ CỦA NGƯỜI NGHE</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="testimonial__slider owl-carousel">
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Tôi chưa thấy nền tảng nào vip đến vậy</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="img/testimonial/1.jpg" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Anh Ba</h5>
+                                <span>Tít tóc cơ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Siuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu</p>
+                             <p>  uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="img/testimonial/2.jpg" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Ronaldo</h5>
+                                <span>Cầu thủ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Niềm tảng nghe nhạc hay chất lượng, lại còn miễn phí nữaa</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="img/testimonial/3.jpg" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Bạn Huấn giấu tên</h5>
+                                <span>Sinh viên trường X</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Nền tảng có nhiều chỗ chưa được thân thiện với người dùng, rắc rối</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="img/testimonial/4.jpg" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Philippe Troussier</h5>
+                                <span>Cầu thủ Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Cho mình xin thông tin nhằm mở rộng cơ hội hợp tác</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="img/testimonial/5.jpg" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>chaien</h5>
+                                <span>Bạn thân Nobita</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Nhạc-->
+     <!-- Services Section Begin -->
+     <section class="services spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="services__title">
+                        <div class="section-title">
+                            <span>Nền tảng âm nhạc</span>
+                            <h2>BẮT KỊP XU THẾ</h2>
+                        </div>
+                        <p>Chào mừng bạn đến với Melody, nơi nhịp điệu của cuộc sống được chắp cánh! 
+                            Trang web âm nhạc hàng đầu của chúng tôi tự hào mang đến cho bạn những bản nhạc mới nhất, độc quyền và không ngừng cập nhật.</p>
+                        <a href="./about.html" class="primary-btn">KHÁM PHÁ NGAY</a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="img/icons/si-1.png" alt="">
+                                </div>
+                                <h4>THẾ GIỚI ÂM THANH</h4>
+                                <p>Tại Melodyy, chúng tôi hiểu rằng âm nhạc là ngôn ngữ toàn cầu - 
+                                    một ngôn ngữ mà mọi người đều có thể cảm nhận và kết nối.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="img/icons/si-2.png" alt="">
+                                </div>
+                                <h4>THƯ VIỆN PHONG PHÚ</h4>
+                                <p>Cung cấp một kho tàng bài hát đa dạng từ nhiều thể loại khác nhau, 
+                                    từ pop, rock, jazz, bolero,...luôn được cập nhật mới và chất lượng nhất.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="img/icons/si-3.png" alt="">
+                                </div>
+                                <h4>CHẤT LƯỢNG VIDEO</h4>
+                                <p>Liên tục cập nhật các MV mới nhất, giúp người dùng không bỏ lỡ bất kỳ xu hướng âm nhạc nào.
+                                    MV độc quyền, độ phân giải HD trở lên.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="img/icons/si-4.png" alt="">
+                                </div>
+                                <h4>THÂN THIỆN NGƯỜI NGHE</h4>
+                                <p>dùng dễ sử dụng, chất lượng âm thanh, sự đa dạng của thư viện nhạc, 
+                                    và khả năng tương thích trên các thiết bị.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+ <!-- Logo Begin -->
+ <div class="logo spad">
+    <div class="section-title center-title">
+        <span>NHÀ TÀI TRỢ</span>
+        <h2>ĐỒNG HÀNH CÙNG MELODYY</h2>
+    </div>
+    <div class="container">
+        <div class="logo__carousel owl-carousel">
+          <a href="https://binhduongauto.vn/" class="logo__item" target="_blank"><img src="img/logo/1.png" alt=""></a>
+          <a href="https://open.spotify.com/" class="logo__item" target="_blank"><img src="img/logo/2.png" alt=""></a>
+          <a href="https://zingmp3.vn/" class="logo__item" target="_blank"><img src="img/logo/3.png" alt=""></a>
+          <a href="https://www.nhaccuatui.com/" class="logo__item" target="_blank"><img src="img/logo/4.png" alt=""></a>
+          <a href="https://mazdatruongchinh.vn/vehicles/new-mazda2" class="logo__item" target="_blank"><img src="img/logo/5.pNg" alt=""></a>
+          <a href="https://iuh.edu.vn/" class="logo__item" target="_blank"><img src="img/logo/2.jpg" alt=""></a>
+        </div>
+      </div>
+</div>
+<!-- Logo End -->
+    <!-- Call To Action Section Begin -->
+    <section class="callto spad set-bg" data-setbg="img/33.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="callto__text">
+                        <h2>CHẾ ĐỘ ÂM THANH  ATMOS</h2>
+                        <p>Mang lại trải nghiệm âm thanh 3D, chân thực</p>
+                        <a href="https://www.samsung.com/vn/support/mobile-devices/what-is-dolby-atmos/" 
+                        class="logo__item" target="_blank">TRẢI NGHIỆM NHANH</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row"> 
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="#"><img src="img/1.png" alt=""></a>
+                        </div>
+                    </div> 
+                    <div class="col-lg-3 col-md-3">
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div id="comp-lmlgnu2m" class="comp-lmlgnu2m WzbAF8">
+
+                            <a class="oRtuWN" href="https://www.linkedin.com/in/mai-tu%E1%BA%A5n-phong-759383234/" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="Facebook">  </a>
+                            
+                            <a class="oRtuWN" href="https://www.facebook.com/profile.php?id=61556175536756" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="Facebook">
+
+                                <img style="width: 39px; height: 39px; object-fit: cover;" src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/e316f544f9094143b9eac01f1f19e697.png" alt="Facebook" /> </a>
+                                <a class="oRtuWN" href="https://twitter.com/Yosua57131693" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="Twitter">
+                                    <img style="width: 39px; height: 39px; object-fit: cover;" src="https://static.wixstatic.com/media/9c4b521dd2404cd5a05ed6115f3a0dc8.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9c4b521dd2404cd5a05ed6115f3a0dc8.png" alt="Twitter" /> </a>
+                                    <a class="oRtuWN" href="https://www.linkedin.com/in/mai-tu%E1%BA%A5n-phong-759383234/" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="LinkedIn">
+                                        <img style="width: 39px; height: 39px; object-fit: cover;" src="https://static.wixstatic.com/media/48a2a42b19814efaa824450f23e8a253.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/48a2a42b19814efaa824450f23e8a253.png" alt="LinkedIn" /> </a>
+                                        <a class="oRtuWN" href="https://www.tiktok.com/@thegioiautobd" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="YouTube">
+                                            <img style="width: 39px; height: 39px; object-fit: cover;" src="https://static.wixstatic.com/media/a1b09fe8b7f04378a9fe076748ad4a6a.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a1b09fe8b7f04378a9fe076748ad4a6a.png" alt="YouTube" /> </a>
+                                            <a class="oRtuWN" href="https://www.tiktok.com/@thegioiautobd" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="TikTok ">
+                                                <img style="width: 39px; height: 39px; object-fit: cover;" src="https://static.wixstatic.com/media/11062b_7a80704b0d4547c4a6a39347d587411d~mv2.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_7a80704b0d4547c4a6a39347d587411d~mv2.png" alt="TikTok " /></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__option__item">
+                            <h5>GIỚI THIỆU</h5>
+                            <p style="color:rgb(186, 186, 186); font-size: 20px;">Melodyy là một nền tảng âm thanh trực tuyến mới được ra mắt vào năm 2024, 
+                             cung cấp nhiều tính năng độc đáo và ưu điểm vượt trội so với các nền tảng khác</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__option__item">
+                            <h5>THÔNG TIN LIÊN HỆ</h5>
+                            <ul>
+                                <li><a href="#" style="font-size: 20px;">💬 messenger.melodyy</a></li>
+                                <li><a href="#" style="font-size: 20px;">✉️ cbinhduongauto@gmail.com</a></li>
+                                <li><a href="#" style="font-size: 20px;">📞 0329 327 535</a></li>
+                                <li><a href="#" style="font-size: 20px;">🗺️ Gò Vấp, TP.Hồ Chí Minh</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__option__item">
+                            <h5>ĐÁNH GIÁ NỀN TẢNG</h5>
+                            <ul>
+                                <li><p style="color:rgb(186, 186, 186); font-size: 20px;">Melodyy là nền tảng mới. Hãy để lại nhận xét của bạn để Melodyy phát triển hơn </p></li>
+                                <li><form action="#">
+                                    <input type="text">
+                                    <button type="submit"  onclick="increset()"><i class="fa fa-send"></i></button>
+                                    <div id="popup" class="popup hidden">
+                                        <h1 style="color: aliceblue;">Cảm ơn đã gửi</h1>
+                                    </div>
+                                </form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p style="display: flex;">
+                            Trang web được thiết kế bởi: 
+                            <span style="color: rgb(95, 80, 212); margin-left: 5px;">Mai Tuấn Phong</span>
+                            - MSSV: 
+                            <span style="color: rgb(95, 80, 212); margin-left: 5px;">21068061</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Javasctription -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="./assets/javascript/main.js"> </script>
+    <script>
+
+
+        // Function to open login modal
+        function openLoginModal() {
+            if(type = 'registerModal'){
+                document.getElementById(type).style.display = 'none';
+                document.getElementById('loginModal').style.display = 'flex';
+            }else{
+                document.getElementById('loginModal').style.display = 'flex';
+            }
+        }
+
+        // Function to open register modal
+        function openRegisterModal(type) {
+            if(type = 'loginModal'){
+                document.getElementById(type).style.display = 'none';
+                document.getElementById('registerModal').style.display = 'flex';
+            }else{
+                document.getElementById('registerModal').style.display = 'flex';
+            }
+
+        }
+
+        // Function to close modals
+        function closeModal() {
+            document.getElementById("loginModal").style.display = 'none';
+
+        }
+
+        // Close the modal when clicked outside of it
+        window.onclick = function(event) {
+            if (event.target.className == 'modal') {
+                event.target.style.display = 'none';
+            }
+        }
+        function increset1() {
+    let numberElement = document.getElementById("counter_num1");
+    let currentNumber = parseInt(numberElement.textContent); // Get current number from HTML
+    // Increment the number
+    currentNumber = currentNumber + 1;
+
+    // Update the HTML content with the new number
+    numberElement.textContent = currentNumber;
+    closeModal()
+}
+    </script>
+  
+</body>
+</html>

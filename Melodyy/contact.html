@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Nhạc số Melodyy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liên hệ Melodyy</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!--CSS nhạc -->
+    <link rel="icon" href="img/2.png" type="image/gif" sizes="16x16">
+</head>
+
+<body>
+    <style>
+        .active_login:active .modal {
+          display: flex !important;
+        }
+        </style>
+    <body>
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+    
+        <!-- Header Section Begin -->
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="header__logo">
+                            <a href="./index.html"><img src="img/1.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="header__nav__option">
+                            <nav class="header__nav__menu mobile-menu">
+                                <ul>
+                                    <li><a href="./index.html">TRANG CHỦ</a></li>
+                                    <li><a href="./index1.html">TOP 100</a></li>
+                                    <li><a href="./MV.html">TOP MV</a></li>
+                                    <li><a href="./about.html">Khám Phá</a></li>
+                                    <li  class="active"><a href="./contact.html">LIÊN HỆ</a></li>
+                                    
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="header__login">
+                            <nav class="header__nav__menu mobile-menu">
+                                <button  onclick="openLoginModal()"  class="Btn">
+                                    <div class="sign">
+                                      <svg viewBox="0 0 512 512">
+                                        <path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path>
+                                      </svg>
+                                    </div>
+                                    <div class="text">Đăng nhập</div>
+                                  </button>
+                            </nav>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </header>
+        <!-- Header End -->
+        <!-- form login , register -->
+    
+        <div class="modal" id="registerModal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+              <!-- Register form -->
+              <div class="auth-form">
+                <div class="auth-form__container">
+                  <div class="auth-form__header">
+                    <h3 class="auth-form__heading">Đăng ký</h3>
+                    <span class="auth-form__switch-btn" onclick="openiLognModal('registerModal')">Đăng nhập</span>
+                  </div>
+                  <div class="auth-form__form">
+                    <div class="auth-form__group">
+                      <input type="email" class="auth-form__input" placeholder="Email của bạn" />
+                    </div>
+                    <div class="auth-form__group">
+                      <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn" />
+                    </div>
+                    <div class="auth-form__group">
+                      <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu" />
+                    </div>
+                  </div>
+      
+                  <div class="auth-form__aside">
+                    <p class="auth-form__policy-text">
+                      Bằng việc đăng kí, bạn đã đồng ý với Melodyy về
+                      <a href="./about.html" class="auth-form__text-link" target="_blank">Điều khoản dịch vụ</a> &
+    <a href="./about.html" class="auth-form__text-link" target="_blank">Chính sách bảo mật</a>
+                    </p>
+                  </div>
+                  <div class="auth-form__controls">
+                    <button class="btn btn--normal auth-form__controls-back" onclick="closeModal('registerModal')">ĐÓNG</button>
+                    <button class="btn btn--primary"  onclick="increset1()" >ĐĂNG KÝ</button>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal" id="loginModal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+      
+              <!-- Login form -->
+              <div class="card">
+                <div class="card2">
+                  <div class="form">
+                  <h1 id="heading">Đăng nhập</h1>
+                  <div class="field">
+                  <svg viewBox="0 0 16 16" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="input-icon">
+                  <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
+                  </svg>
+                    <input type="email" class="input-field" placeholder="Username" autocomplete="off">
+                  </div>
+                  <div class="field">
+                  <svg viewBox="0 0 16 16" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="input-icon">
+                  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+                  </svg>
+                    <input type="password" class="input-field" placeholder="Password">
+                  </div>
+                  <div class="btn">
+                  <button class="button1" onclick="increset1()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                  <button class="button2" onclick="openRiegsterModal('loginModal')">Đăng kí</button>
+    
+                  </div>
+                  <button class="button3">Quên mật khẩu</button>
+                  <button class="button2" onclick="closeModal()">Đóng</button>
+                  </div>
+                </div>
+                  </div>>
+              </div>
+    
+    
+              <div class="modal" id="registerModal">
+                <div class="modal__overlay"></div>
+                <div class="modal__body">
+                  <!-- Register form -->
+                  <div class="auth-form">
+                    <div class="auth-form__container">
+                      <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form__switch-btn" onclick="openLoginModal('registerModal')">Đăng nhập</span>
+                      </div>
+                      <div class="auth-form__form">
+                        <div class="auth-form__group">
+                          <input type="email" class="auth-form__input" placeholder="Email của bạn" />
+                        </div>
+                        <div class="auth-form__group">
+                          <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn" />
+                        </div>
+                        <div class="auth-form__group">
+                          <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu" />
+                        </div>
+                      </div>
+          
+                      <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                          Bằng việc đăng kí, bạn đã đồng ý với Melodyy về
+                          <a href="./about.html" class="auth-form__text-link" target="_blank">Điều khoản dịch vụ</a> &
+        <a href="./about.html" class="auth-form__text-link" target="_blank">Chính sách bảo mật</a>
+                        </p>
+                      </div>
+                      <div class="auth-form__controls">
+                        <button class="btn btn--normal auth-form__controls-back" onclick="closeModal('registerModal')">ĐÓNG</button>
+                        <button class="btn btn--primary" onclick="openLoginModal()" >ĐĂNG KÝ</button>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>LIÊN HỆ</h2>
+                        <div class="breadcrumb__links">
+                            <a href="#">TRANG CHỦ</a>
+                            <span>LIÊN HỆ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Contact Widget Section Begin -->
+    <section class="contact-widget spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+                    <div class="contact__widget__item">
+                        <div class="contact__widget__item__icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h4>ĐỊA CHỈ</h4>
+                            <p>Gò Vấp, Thành phố Hồ Chí Minh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+                    <div class="contact__widget__item">
+                        <div class="contact__widget__item__icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h4>ĐIỆN THOẠI</h4>
+                            <p>0329327JQK</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+                    <div class="contact__widget__item">
+                        <div class="contact__widget__item__icon">
+<i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h4>Email</h4>
+                            <p>cbinhduongauto@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Widget Section End -->
+    <!-- Call To Action Section Begin -->
+    <section class="contact spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact__map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62701.63922738381!2d106.6571839424663!3d10.822601430498018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1711723510378!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact__form">
+                        <h3>LIÊN HỆ CỘNG TÁC</h3>
+                        <form action="#">
+                            <input type="text" placeholder="Họ Và Tên">
+                            <input type="email" placeholder="Email">
+                            <input type="tel" placeholder="Số Điện Thoại">
+                            <textarea placeholder="Message"></textarea>
+                            <button type="submit" class="site-btn">Gửi</button>
+                            <div id="popup" class="popup hidden">
+                                <h1 style="color: aliceblue;">Cảm ơn đã gửi</h1>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action Section End -->
+
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row"> 
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="#"><img src="img/1.png" alt=""></a>
+                        </div>
+                    </div> 
+                    <div class="col-lg-3 col-md-3">
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div id="comp-lmlgnu2m" class="comp-lmlgnu2m WzbAF8">
+
+                            <a class="oRtuWN" href="https://www.linkedin.com/in/mai-tu%E1%BA%A5n-phong-759383234/" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="Facebook">  </a>
+                            
+                            <a class="oRtuWN" href="https://www.facebook.com/profile.php?id=61556175536756" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="Facebook">
+
+                                <img style="width: 39px; height: 39px; object-fit: cover;" src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/e316f544f9094143b9eac01f1f19e697.png" alt="Facebook" /> </a>
+                                <a class="oRtuWN" href="https://twitter.com/Yosua57131693" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="Twitter">
+                                    <img style="width: 39px; height: 39px; object-fit: cover;" src="https://static.wixstatic.com/media/9c4b521dd2404cd5a05ed6115f3a0dc8.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9c4b521dd2404cd5a05ed6115f3a0dc8.png" alt="Twitter" /> </a>
+                                    <a class="oRtuWN" href="https://www.linkedin.com/in/mai-tu%E1%BA%A5n-phong-759383234/" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="LinkedIn">
+                                        <img style="width: 39px; height: 39px; object-fit: cover;" src="https://static.wixstatic.com/media/48a2a42b19814efaa824450f23e8a253.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/48a2a42b19814efaa824450f23e8a253.png" alt="LinkedIn" /> </a>
+                                        <a class="oRtuWN" href="https://www.tiktok.com/@thegioiautobd" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="YouTube">
+                                            <img style="width: 39px; height: 39px; object-fit: cover;" src="https://static.wixstatic.com/media/a1b09fe8b7f04378a9fe076748ad4a6a.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a1b09fe8b7f04378a9fe076748ad4a6a.png" alt="YouTube" /> </a>
+                                            <a class="oRtuWN" href="https://www.tiktok.com/@thegioiautobd" target="_blank" rel="noreferrer noopener" data-testid="linkElement" aria-label="TikTok ">
+                                                <img style="width: 39px; height: 39px; object-fit: cover;" src="https://static.wixstatic.com/media/11062b_7a80704b0d4547c4a6a39347d587411d~mv2.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_7a80704b0d4547c4a6a39347d587411d~mv2.png" alt="TikTok " /></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__option__item">
+                            <h5>GIỚI THIỆU</h5>
+                            <p style="color:rgb(186, 186, 186); font-size: 20px;">Melodyy là một nền tảng âm thanh trực tuyến mới được ra mắt vào năm 2024, 
+                             cung cấp nhiều tính năng độc đáo và ưu điểm vượt trội so với các nền tảng khác</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__option__item">
+                            <h5>THÔNG TIN LIÊN HỆ</h5>
+                            <ul>
+                                <li><a href="#" style="font-size: 20px;">💬 messenger.melodyy</a></li>
+                                <li><a href="#" style="font-size: 20px;">✉️ cbinhduongauto@gmail.com</a></li>
+                                <li><a href="#" style="font-size: 20px;">📞 0329 327 535</a></li>
+                                <li><a href="#" style="font-size: 20px;">🗺️ Gò Vấp, TP.Hồ Chí Minh</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__option__item">
+                            <h5>ĐÁNH GIÁ NỀN TẢNG</h5>
+                            <ul>
+                                <li><p style="color:rgb(186, 186, 186); font-size: 20px;">Melodyy là nền tảng mới. Hãy để lại nhận xét của bạn để Melodyy phát triển hơn </p></li>
+                                <li><form action="#">
+                                    <input type="text">
+                                    <button type="submit"  onclick="increset()"><i class="fa fa-send"></i></button>
+                                    <div id="popup" class="popup hidden">
+                                        <h1 style="color: aliceblue;">Cảm ơn đã gửi</h1>
+                                    </div>
+                                </form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p style="display: flex;">
+                            Trang web được thiết kế bởi: 
+                            <span style="color: rgb(95, 80, 212); margin-left: 5px;">Mai Tuấn Phong</span>
+                            - MSSV: 
+                            <span style="color: rgb(95, 80, 212); margin-left: 5px;">21068061</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+
+        // Function to open login modal
+        function openLoginModal() {
+            if(type = 'registerModal'){
+                document.getElementById(type).style.display = 'none';
+                document.getElementById('loginModal').style.display = 'flex';
+            }else{
+                document.getElementById('loginModal').style.display = 'flex';
+            }
+        }
+
+        // Function to open register modal
+        function openRegisterModal(type) {
+            if(type = 'loginModal'){
+                document.getElementById(type).style.display = 'none';
+                document.getElementById('registerModal').style.display = 'flex';
+            }else{
+                document.getElementById('registerModal').style.display = 'flex';
+            }
+
+        }
+
+        // Function to close modals
+        function closeModal() {
+            document.getElementById("loginModal").style.display = 'none';
+
+        }
+
+        // Close the modal when clicked outside of it
+        window.onclick = function(event) {
+            if (event.target.className == 'modal') {
+                event.target.style.display = 'none';
+            }
+        }
+        function increset1() {
+    let numberElement = document.getElementById("counter_num1");
+    let currentNumber = parseInt(numberElement.textContent); // Get current number from HTML
+    // Increment the number
+    currentNumber = currentNumber + 1;
+
+    // Update the HTML content with the new number
+    numberElement.textContent = currentNumber;
+    closeModal()
+}
+    </script>
+</body>
+
+</html>

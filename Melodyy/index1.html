@@ -1,0 +1,1355 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Nhạc số Melodyy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TOP 100</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!--CSS nhạc -->
+    <link rel="icon" href="img/2.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+<style>
+    .active_login:active .modal {
+      display: flex !important;
+    }
+    </style>
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/1.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li ><a href="./index.html">TRANG CHỦ</a></li>
+                                <li class="active"><a href="./index1.html">TOP 100</a></li>
+                                <li><a href="./MV.html">TOP MV</a></li>
+                                <li><a href="./about.html">Khám Phá</a></li>
+                                <li><a href="./contact.html">LIÊN HỆ</a></li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__login">
+                        <nav class="header__nav__menu mobile-menu">
+                            <button  onclick="openLoginModal()"  class="Btn">
+                                <div class="sign">
+                                  <svg viewBox="0 0 512 512">
+                                    <path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path>
+                                  </svg>
+                                </div>
+                                <div class="text" style="font-size: 18px;">Đăng nhập</div>
+                              </button>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- form login , register -->
+    <div class="modal" id="registerModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+          <!-- Register form -->
+          <div class="auth-form">
+            <div class="auth-form__container">
+              <div class="auth-form__header">
+                <h3 class="auth-form__heading">Đăng ký</h3>
+                <span class="auth-form__switch-btn" onclick="openiLognModal('registerModal')">Đăng nhập</span>
+              </div>
+              <div class="auth-form__form">
+                <div class="auth-form__group">
+                  <input type="email" class="auth-form__input" placeholder="Email của bạn" />
+                </div>
+                <div class="auth-form__group">
+                  <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn" />
+                </div>
+                <div class="auth-form__group">
+                  <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu" />
+                </div>
+              </div>
+  
+              <div class="auth-form__aside">
+                <p class="auth-form__policy-text">
+                  Bằng việc đăng kí, bạn đã đồng ý với Melodyy về
+                  <a href="./about.html" class="auth-form__text-link" target="_blank">Điều khoản dịch vụ</a> &
+<a href="./about.html" class="auth-form__text-link" target="_blank">Chính sách bảo mật</a>
+                </p>
+              </div>
+              <div class="auth-form__controls">
+                <button class="btn btn--normal auth-form__controls-back" onclick="closeModal('registerModal')">ĐÓNG</button>
+                <button class="btn btn--primary"  onclick="increset1()" >ĐĂNG KÝ</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="loginModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+  
+          <!-- Login form -->
+          <div class="card">
+            <div class="card2">
+              <div class="form">
+              <h1 id="heading">Đăng nhập</h1>
+              <div class="field">
+              <svg viewBox="0 0 16 16" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="input-icon">
+              <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
+              </svg>
+                <input type="email" class="input-field" placeholder="Username" autocomplete="off">
+              </div>
+              <div class="field">
+              <svg viewBox="0 0 16 16" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="input-icon">
+              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+              </svg>
+                <input type="password" class="input-field" placeholder="Password">
+              </div>
+              <div class="btn">
+              <button class="button1" onclick="increset1()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              <button class="button2" onclick="openRiegsterModal('loginModal')">Đăng kí</button>
+
+              </div>
+              <button class="button3">Quên mật khẩu</button>
+              <button class="button2" onclick="closeModal()">Đóng</button>
+              </div>
+            </div>
+              </div>>
+          </div>
+
+
+          <div class="modal" id="registerModal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+              <!-- Register form -->
+              <div class="auth-form">
+                <div class="auth-form__container">
+                  <div class="auth-form__header">
+                    <h3 class="auth-form__heading">Đăng ký</h3>
+                    <span class="auth-form__switch-btn" onclick="openLoginModal('registerModal')">Đăng nhập</span>
+                  </div>
+                  <div class="auth-form__form">
+                    <div class="auth-form__group">
+                      <input type="email" class="auth-form__input" placeholder="Email của bạn" />
+                    </div>
+                    <div class="auth-form__group">
+                      <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn" />
+                    </div>
+                    <div class="auth-form__group">
+                      <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu" />
+                    </div>
+                  </div>
+      
+                  <div class="auth-form__aside">
+                    <p class="auth-form__policy-text">
+                      Bằng việc đăng kí, bạn đã đồng ý với Melodyy về
+                      <a href="./about.html" class="auth-form__text-link" target="_blank">Điều khoản dịch vụ</a> &
+    <a href="./about.html" class="auth-form__text-link" target="_blank">Chính sách bảo mật</a>
+                    </p>
+                  </div>
+                  <div class="auth-form__controls">
+                    <button class="btn btn--normal auth-form__controls-back" onclick="closeModal('registerModal')">ĐÓNG</button>
+                    <button class="btn btn--primary" onclick="openLoginModal()" >ĐĂNG KÝ</button>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+ <section>
+    <div class="main" style="background-image: url(img/111.png);">
+        <div class="grid">
+            <!-- BEGIN SIDEBAR -->
+            <div class="main-sidebar mobile-hiden">
+                <div class="sidebar__persional">
+                    <ul class="sidebar__list">
+                        <!-- sidebar__item--active -->
+                        <li class="sidebar__item js__sidebar-tabs js__main-color sidebar__item--active">
+                            <i class="far fa-play-circle"></i>
+                            Thư Viện
+                        </li>
+                        <li class="sidebar__item js__sidebar-tabs js__main-color">
+                            <i class="fas fa-compact-disc"></i>
+                            HOT
+                        </li>
+                        <li class="sidebar__item js__sidebar-tabs js__main-color">
+                            <i class="fas fa-chart-line"></i>
+                            #Topmelody
+                        </li>
+                        <li class="sidebar__item js__main-color sidebar__item-radio js__toast">
+                            <i class="fas fa-broadcast-tower"></i>
+                            Số lượt nghe
+                            <span id="counter_num1">5630</span>
+                        </li>
+                        <li class="sidebar__item js__main-color sidebar__item-radio js__toast">
+                            <i class="far fa-list-alt"></i>
+                            Lượt tải xuống
+                            <span id="counter_num">32</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar__library-center">
+                    <span class="sidebar__library-center-vip-heading">Nghe nhạc không quảng cáo cùng kho nhạc VIP</span>
+                    <span class="sidebar__library-center-vip-body js__toast">Nâng cấp VIP</span>
+                </div>
+                <div class="sidebar__line"></div>
+            </div>
+            <!-- END SIDEBAR -->
+
+            <!-- BEGIN CONTAINER -->
+            <div class="main-container">
+                <!-- header--active -->
+                <div class="header-wrapper">
+                    <div class="header1">
+                        <div class="header__width-search js__backgroundColor">
+                            <i class="fas fa-search header__width-search-icon js__sub-color"></i>
+                            <!-- header__width-search-input--white -->
+                            <!-- header__width-search-input--dark -->
+                            <input placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV . . ." type="text" class="header__width-search-input">
+                            <!-- header__width-search-sub--white -->
+                            <!-- header__width-search-sub--green -->
+                            <!-- header__width-search-sub--gray -->
+                            <!-- header__width-search-sub--purple -->
+                            <div class="header__width-search-sub">
+                                <span class="header__width-search-sub-header js__main-color">Đề xuất cho bạn</span>
+                                <ul class="header__width-search-sub-list ">
+                                    <li class="header__width-search-sub-item">
+                                        <a href="#" class="header__width-search-sub-item-link">
+                                            <i class="fas fa-arrows-alt-h js__sub-color"></i>
+                                            <span class="js__sub-color">là ai</span>
+                                        </a>
+                                    </li>
+                                    <li class="header__width-search-sub-item">
+                                        <a href="#" class="header__width-search-sub-item-link">
+                                            <i class="fas fa-arrows-alt-h js__sub-color"></i>
+                                            <span class="js__sub-color">adele</span>
+                                        </a>
+                                    </li>
+                                    <li class="header__width-search-sub-item">
+                                        <a href="#" class="header__width-search-sub-item-link">
+                                            <i class="fas fa-arrows-alt-h js__sub-color"></i>
+                                            <span class="js__sub-color">chung tình</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="header__right">
+                            <div class="header__theme js__sub-color js__backgroundColor">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <div class="header__right-overlay hiden"></div>
+                            <!-- header__setting--active -->
+                            <div class="header__setting mobile-hiden js__sub-color js__backgroundColor">
+                                <i class="fas fa-user"></i>
+                                <ul class="header__setting-list">
+                                </ul>
+                            </div>
+                            <div class="header__user hover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-container-pertional js__container-panes active">
+                    <div class="music__option">
+                        <ul class="music__option-list js__backgroundColor">
+                            <!-- top-music__option-item -->
+                            <li class="tabs-item music__option-item js__main-color music__option-item--active">Tổng quan</li>
+                            <li class="tabs-item music__option-item js__main-color">Bài hát</li>
+                            <li class="tabs-item music__option-item js__main-color">Playlist</li>
+                            <li class="tabs-item music__option-item js__main-color">Nghệ sĩ</li>
+                        </ul>
+                    </div>
+                    <!-- option 0 -->
+                    <div class="option-all panes-item active">
+                        <!-- song -->
+                        <div class="option-all__song option-all__margin_bot">
+                            <div class="option-heading option-all__song-heading ">
+                                <h3 class="option-heading-name option-all__song-heading-left mobile-hiden js__main-color">Bài Hát</h3>
+                                <div class="option-all__song-heading-right">
+                                    <div class="more-list mobile-hiden">
+                                    </div>
+                                    <div class="btn option-all__song-heading-right-playall-btn js__playall-0" style="color: white;"> <i class="fas fa-play"></i> Phát tất cả </div>
+                                </div>
+                            </div>
+                            <div class="grid row">
+                                <div class="col l-3 m-0 s-0">
+                                    <div class="option-all__song-slider">
+                                        <!-- first second -->
+                                        <img src="./assets/img/slider/00.jpg" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-first">
+                                        <img src="./assets/img/slider/11.jpg" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-second">
+                                        <img src="./assets/img/slider/22.jpg" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/33.png" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/44.jpg" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/55.jpg" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/00.jpg" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/11.jpg" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/22.jpg" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/33.png" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/44.jpg" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/55.jpg" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/12.webp" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/13.webp" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/14.webp" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                        <img src="./assets/img/slider/15.webp" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
+                                    </div>
+                                </div>
+                                <div class="col l-1 m-12 s-12">
+                                </div>
+                                <div class="col l-8 m-12 s-12">
+                                    <div class="option-all__songs">
+                                        <ul class="option-all__songs-list songs-list">
+                                            <!-- songs-item--active -->
+                                            <!-- <li class="songs-item songs-item--active">
+                                                <div class="songs-item-left">
+                                                    <img src="./assets/img/songs/0.webp" alt="danh sanh nhac" class="songs-item-left-img">
+                                                    <div class="songs-item-left-body">
+                                                        <h3 class="songs-item-left-body-name">Cưới Luôn Được Không</h3>
+                                                        <span class="songs-item-left-body-singer">Út Nhị x KenPham Remix</span>
+                                                    </div>
+                                                </div>
+                                                <div class="songs-item-center">
+                                                    <span>Cưới Luôn Được Không (Single)</span>
+                                                </div>
+                                                <div class="songs-item-right">
+                                                    <span class="songs-item-right-mv"><i class="fas fa-photo-video"></i></span>
+                                                    <span class="songs-item-right-lyric"><i class="fas fa-microphone"></i></span>
+                                                    songs-item-right-tym--active
+                                                    <span class="songs-item-right-tym">
+                                                        <i class="fas fa-heart songs-item-right-tym-first"></i>
+                                                        <i class="far fa-heart songs-item-right-tym-last"></i>
+                                                    </span>
+                                                    <span class="songs-item-right-duration">04:05</span>
+                                                    <span class="songs-item-right-more"><i class="fas fa-ellipsis-h"></i></span>
+                                                </div>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="option-all__playlist option-all__margin_bot">
+                            <div class="option-heading option-all__playlist-heading">
+                                <h3 class="option-heading-name js__main-color">Playlist</h3>
+                                <div class="more-list mobile-hiden">
+                                </div>
+                            </div>
+                            <ul class="option-all__playlist-list">
+                                <div class="row">
+                                    <div class="col l-2-4 m-3 s-6 mobile-margin-bot-10px">
+                                        <li class="option-all__playlist-item0">
+                                            <i class="fas fa-plus"></i>
+                                            <span>Tạo playlist mới</span>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-3 s-6 mobile-margin-bot-10px">
+                                        <li class="option-all__playlist-item">
+                                            <div class="option-all__playlist-item-img-wrapper">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i>
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i>
+                                                </div>
+                                                <div class="option-all__playlist-item-img" style="background-image: url(./img/pt/4.webp);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content">
+                                                <div class="option-all__playlist-item-content-name1 js__main-color">XU HƯỚNG VPOP</div>
+                                                <div class="option-all__playlist-item-content-name2 js__sub-color">#Topmelodyy</div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-3 s-6 mobile-margin-bot-10px">
+                                        <li class="option-all__playlist-item">
+                                            <div class="option-all__playlist-item-img-wrapper">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i>
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i>
+                                                </div>
+                                                <div class="option-all__playlist-item-img" style="background-image: url(./img/pt/2.webp);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content">
+                                                <div class="option-all__playlist-item-content-name1 js__main-color">NGHE NHIỀU</div>
+                                                <div class="option-all__playlist-item-content-name2 js__sub-color">Melodyy</div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-3 s-6 mobile-margin-bot-10px">
+                                        <li class="option-all__playlist-item">
+                                            <div class="option-all__playlist-item-img-wrapper">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i>
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i>
+                                                </div>
+                                                <div class="option-all__playlist-item-img option-all__playlist-item-img-fix" style="background-image: url(./img/hero/3.jpg);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content">
+                                                <div class="option-all__playlist-item-content-name1 js__main-color">GIAI ĐIỆU XƯA</div>
+                                                <div class="option-all__playlist-item-content-name2 js__sub-color">Bolero</div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+
+                        
+                        <!-- option-all__playlist -->
+                        
+
+                        <!-- option-all__mv -->
+                        <div class="option-all__playlist option-all__margin_bot">
+                            <div class="option-heading option-all__playlist-heading">
+                                <h3 class="option-heading-name js__main-color">MV</h3>
+                                <div class="more-list mobile-hiden">
+                                    <a href="./MV.html">
+                                      <span class="js__main-color">Tất cả</span>
+                                      <i class="fas fa-chevron-right js__main-color"></i>
+                                    </a>
+                                  </div>
+                            </div>
+                            <ul class="option-all__playlist-list">
+                                <div class="row">
+                                    <div class="col l-6 m-6 s-18 mobile-margin-bot-30px">
+                                        <div class="portfolio__item">
+                                            <div class="portfolio__item__video set-bg" data-setbg="img/Work/3.jpg">
+                                                <a href="https://www.youtube.com/watch?v=zoEtcR5EW08" class="play-btn video-popup"><i
+                                                        class="fa fa-play"></i></a>
+                                            </div>
+                                            <div class="portfolio__item__text">
+                                                <h4>Chúng ta của tương lai</h4>
+                                                <ul>
+                                                    <li>Sơn Tùng MT-P</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-6 m-6 s-18 mobile-margin-bot-30px">
+                                        <div class="portfolio__item">
+                                            <div class="portfolio__item__video set-bg" data-setbg="img/Work/8.jpg">
+                                                <a href="https://www.youtube.com/watch?v=rwIOCoDtHyI" class="play-btn video-popup"><i
+                                                        class="fa fa-play"></i></a>
+                                            </div>
+                                            <div class="portfolio__item__text">
+                                                <h4>VỤ NỔ LỚN - KHÔNG QUAN TRỌNG</h4>
+                                                <ul>
+                                                    <li>MCK ft. ORIJINN, TAGE , JUSTATEE , TRUNG TRẦN
+                                                        CU CHÍNH, CU ĐẠT, HOÀNG VĂNN</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                        <!-- option-singer -->
+                        <div class="option-all__playlist option-all__margin_bot">
+                            <div class="option-heading option-all__playlist-heading">
+                                <h3 class="option-heading-name js__main-color">Nghệ Sĩ</h3>
+                                <div class="more-list mobile-hiden">
+                                    <span class="js__main-color">Tất cả</span>
+                                    <i class="fas fa-chevron-right js__main-color"></i>
+                                </div>
+                            </div>
+                            <ul class="option-all__playlist-list">
+                                <div class="row">
+                                    <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                        <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                            <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                                </div>
+                                                <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/4.jpg);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content-singer">
+                                                <div class="option-all__playlist-item-content-singer-name1 js__main-color">Mỹ Tâm</div>
+                                                <div class="option-all__playlist-item-content-singer-name2 js__sub-color">757K quan tâm</div>
+                                                <div class="option-all__playlist-item-content-singer-profile">
+                                                    <i class="fas fa-random js__main-color"></i>
+                                                    <span class="js__main-color">Góc nhạc</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                        <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                            <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                                </div>
+                                                <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/2.jpg);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content-singer">
+                                                <div class="option-all__playlist-item-content-singer-name1 js__main-color">Phan Mạnh Quỳnh</div>
+                                                <div class="option-all__playlist-item-content-singer-name2 js__sub-color">381K quan tâm</div>
+                                                <div class="option-all__playlist-item-content-singer-profile">
+                                                    <i class="fas fa-random js__main-color"></i>
+                                                    <span class="js__main-color">Góc nhạc</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                        <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                            <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                                </div>
+                                                <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/3.jpg);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content-singer">
+                                                <div class="option-all__playlist-item-content-singer-name1 js__main-color">HIEUTHUHAI</div>
+                                                <div class="option-all__playlist-item-content-singer-name2 js__sub-color">466K quan tâm</div>
+                                                <div class="option-all__playlist-item-content-singer-profile">
+                                                    <i class="fas fa-random js__main-color"></i>
+                                                    <span class="js__main-color">Góc nhạc</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                        <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                            <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                                </div>
+                                                <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/1.jpg);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content-singer">
+                                                <div class="option-all__playlist-item-content-singer-name1 js__main-color">Sơn Tùng M-TP</div>
+                                                <div class="option-all__playlist-item-content-singer-name2 js__sub-color">2.2M quan tâm</div>
+                                                <div class="option-all__playlist-item-content-singer-profile">
+                                                    <i class="fas fa-random js__main-color"></i>
+                                                    <span class="js__main-color">Góc nhạc</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- option 1 -->
+                    <div class="option-music panes-item">
+                        <div class="option-heading option-all__song-heading">
+                            <h3 class="option-heading-name option-all__song-heading-left js__main-color">Bài Hát</h3>
+                            <div class="option-all__song-heading-right">
+                                <div class="more-list">
+                                    <span class="js__main-color">Tất cả</span>
+                                    <i class="fas fa-chevron-right js__main-color"></i>
+                                </div>
+                                <div class="btn option-all__song-heading-right-upload-btn js__main-color js__backgroundColor">
+                                    <i class="fas fa-upload"></i>
+                                    Tải lên
+                                </div>
+                                <div class="btn option-all__song-heading-right-playall-btn js__playall-1">
+                                    <i class="fas fa-play"></i>
+                                    Phát tất cả
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid row">
+                            <ul class="option-music-list songs-list">
+                                <!-- songs-item--active -->
+                                <!-- <li class="songs-item songs-item--active">
+                                    <div class="songs-item-left">
+                                        <img src="./assets/img/songs/0.webp" alt="danh sanh nhac" class="songs-item-left-img">
+                                        <div class="songs-item-left-body">
+                                            <h3 class="songs-item-left-body-name">Cưới Luôn Được Không</h3>
+                                            <span class="songs-item-left-body-singer">Út Nhị x KenPham Remix</span>
+                                        </div>
+                                    </div>
+                                    <div class="songs-item-center">
+                                        <span>Cưới Luôn Được Không (Single)</span>
+                                    </div>
+                                    <div class="songs-item-right">
+                                        <span class="songs-item-right-mv"><i class="fas fa-photo-video"></i></span>
+                                        <span class="songs-item-right-lyric"><i class="fas fa-microphone"></i></span>
+                                        songs-item-right-tym--active
+                                        <span class="songs-item-right-tym">
+                                            <i class="fas fa-heart songs-item-right-tym-first"></i>
+                                            <i class="far fa-heart songs-item-right-tym-last"></i>
+                                        </span>
+                                        <span class="songs-item-right-duration">04:05</span>
+                                        <span class="songs-item-right-more"><i class="fas fa-ellipsis-h"></i></span>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- option 2 -->
+                    
+                    <div class="option-playlist panes-item">
+                        <div class="option-all__playlist option-all__margin_bot">
+                            
+                            <div class="option-heading option-all__playlist-heading mobile-hiden">
+                                <h3 class="option-heading-name js__main-color">Playlist</h3>
+                                <div class="more-list ">
+                                </div>
+                            </div>
+                            <ul class="option-all__playlist-list">
+                                <div class="row">
+                                    <div class="col l-2-4 m-3 s-6 mobile-margin-bot-30px">
+                                        <li class="option-all__playlist-item0">
+                                            <i class="fas fa-plus"></i>
+                                            <span>Tạo playlist mới</span>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-3 s-6 mobile-margin-bot-10px">
+                                        <li class="option-all__playlist-item">
+                                            <div class="option-all__playlist-item-img-wrapper">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i>
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i>
+                                                </div>
+                                                <div class="option-all__playlist-item-img" style="background-image: url(./img/pt/4.webp);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content">
+                                                <div class="option-all__playlist-item-content-name1 js__main-color">XU HƯỚNG VPOP</div>
+                                                <div class="option-all__playlist-item-content-name2 js__sub-color">#Topmelodyy</div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-3 s-6 mobile-margin-bot-10px">
+                                        <li class="option-all__playlist-item">
+                                            <div class="option-all__playlist-item-img-wrapper">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i>
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i>
+                                                </div>
+                                                <div class="option-all__playlist-item-img" style="background-image: url(./img/pt/2.webp);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content">
+                                                <div class="option-all__playlist-item-content-name1 js__main-color">NGHE NHIỀU</div>
+                                                <div class="option-all__playlist-item-content-name2 js__sub-color">Melodyy</div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-3 s-6 mobile-margin-bot-10px">
+                                        <li class="option-all__playlist-item">
+                                            <div class="option-all__playlist-item-img-wrapper">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i>
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i>
+                                                </div>
+                                                <div class="option-all__playlist-item-img option-all__playlist-item-img-fix" style="background-image: url(./img/hero/3.jpg);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content">
+                                                <div class="option-all__playlist-item-content-name1 js__main-color">GIAI ĐIỆU XƯA</div>
+                                                <div class="option-all__playlist-item-content-name2 js__sub-color">Bolero</div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+    
+                        <div class="option-all__playlist option-all__margin_bot mobile-hiden">
+                            <div class="option-heading option-all__playlist-heading">
+                                <h3 class="option-heading-name js__main-color">MV</h3>
+                                <div class="more-list">
+                                    <span class="js__main-color">Tất cả</span>
+                                    <i class="fas fa-chevron-right js__main-color"></i>
+                                </div>
+                            </div>
+                            <ul class="option-all__playlist-list">
+                                <div class="row">
+                                    <div class="col l-6 m-6 s-18 mobile-margin-bot-30px">
+                                        <div class="portfolio__item">
+                                            <div class="portfolio__item__video set-bg" data-setbg="img/Work/3.jpg">
+                                                <a href="https://www.youtube.com/watch?v=zoEtcR5EW08" class="play-btn video-popup"><i
+                                                        class="fa fa-play"></i></a>
+                                            </div>
+                                            <div class="portfolio__item__text">
+                                                <h4>Chúng ta của tương lai</h4>
+                                                <ul>
+                                                    <li>Sơn Tùng MT-P</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-6 m-6 s-18 mobile-margin-bot-30px">
+                                        <div class="portfolio__item">
+                                            <div class="portfolio__item__video set-bg" data-setbg="img/Work/8.jpg">
+                                                <a href="https://www.youtube.com/watch?v=rwIOCoDtHyI" class="play-btn video-popup"><i
+                                                        class="fa fa-play"></i></a>
+                                            </div>
+                                            <div class="portfolio__item__text">
+                                                <h4>VỤ NỔ LỚN - KHÔNG QUAN TRỌNG</h4>
+                                                <ul>
+                                                    <li>MCK ft. ORIJINN, TAGE , JUSTATEE , TRUNG TRẦN
+                                                        CU CHÍNH, CU ĐẠT, HOÀNG VĂNN</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- option 3 -->
+                    <div class="option-singer panes-item">
+                        <div class="option-all__playlist option-all__margin_bot">
+                            <div class="option-heading option-all__playlist-heading mobile-hiden">
+                                <h3 class="option-heading-name js__main-color">Nghệ Sĩ</h3>
+                                <div class="more-list">
+                                    <span class="js__main-color">Tất cả</span>
+                                    <i class="fas fa-chevron-right js__main-color"></i>
+                                </div>
+                            </div>
+                            <ul class="option-all__playlist-list">
+                                <div class="row">
+                                    <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                        <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                            <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                                </div>
+                                                <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/4.jpg);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content-singer">
+                                                <div class="option-all__playlist-item-content-singer-name1 js__main-color">Mỹ Tâm</div>
+                                                <div class="option-all__playlist-item-content-singer-name2 js__sub-color">757K quan tâm</div>
+                                                <div class="option-all__playlist-item-content-singer-profile">
+                                                    <i class="fas fa-random js__main-color"></i>
+                                                    <span class="js__main-color">Góc nhạc</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                        <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                            <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                                </div>
+                                                <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/2.jpg);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content-singer">
+                                                <div class="option-all__playlist-item-content-singer-name1 js__main-color">Phan Mạnh Quỳnh</div>
+                                                <div class="option-all__playlist-item-content-singer-name2 js__sub-color">381K quan tâm</div>
+                                                <div class="option-all__playlist-item-content-singer-profile">
+                                                    <i class="fas fa-random js__main-color"></i>
+                                                    <span class="js__main-color">Góc nhạc</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                        <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                            <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                                </div>
+                                                <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/3.jpg);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content-singer">
+                                                <div class="option-all__playlist-item-content-singer-name1 js__main-color">HIEUTHUHAI</div>
+                                                <div class="option-all__playlist-item-content-singer-name2 js__sub-color">466K quan tâm</div>
+                                                <div class="option-all__playlist-item-content-singer-profile">
+                                                    <i class="fas fa-random js__main-color"></i>
+                                                    <span class="js__main-color">Góc nhạc</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                        <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                            <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                                <div class="option-all__playlist-item-img-wrapper-action">
+                                                    <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                    <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                    <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                                </div>
+                                                <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/1.jpg);"></div>
+                                            </div>
+                                            <div class="option-all__playlist-item-content-singer">
+                                                <div class="option-all__playlist-item-content-singer-name1 js__main-color">Sơn Tùng M-TP</div>
+                                                <div class="option-all__playlist-item-content-singer-name2 js__sub-color">2.2M quan tâm</div>
+                                                <div class="option-all__playlist-item-content-singer-profile">
+                                                    <i class="fas fa-random js__main-color"></i>
+                                                    <span class="js__main-color">Góc nhạc</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-container-discover js__container-panes ">
+                    <!-- part slider -->
+                    <div class="container-discover__slider">
+                        <div class="container-discover__slider-item container-discover__slider-item-first">
+                            <img src="./assets/img/slider-discover/1.png" alt="anh" class="container-discover__slider-item-img">
+                        </div>
+                        <div class="container-discover__slider-item container-discover__slider-item-second">
+                            <img src="./assets/img/slider-discover/2.png" alt="anh" class="container-discover__slider-item-img">
+                        </div>
+                        <div class="container-discover__slider-item container-discover__slider-item-third">
+                            <img src="./assets/img/slider-discover/3.jpg" alt="anh" class="container-discover__slider-item-img">
+                        </div>
+                        <div class="container-discover__slider-item container-discover__slider-item-four">
+                            <img src="./assets/img/slider-discover/3.png" alt="anh" class="container-discover__slider-item-img">
+                        </div>
+                        <div class="container-discover__slider-left mobile-hiden js__container-discover__slider-left">
+                            <i class="fas fa-chevron-left js__main-color"></i>
+                        </div>
+                        <div class="container-discover__slider-right mobile-hiden js__container-discover__slider-right">
+                            <i class="fas fa-chevron-right js__main-color"></i>
+                        </div>
+                    </div>
+                    <!-- part playlist -->
+                    <div class="container-discover__playlist option-all__playlist option-all__margin_bot">
+                        <div class="option-heading option-all__playlist-heading">
+                            <h3 class="option-heading-name white-color js__main-color">Playlist</h3>
+                            <div class="more-list mobile-hiden">
+                            </div>
+                        </div>
+                        <ul class="option-all__playlist-list">
+                            <div class="row">
+                                <div class="col l-2-4 m-3 s-6 mobile-margin-bot-30px">
+                                    <li class="option-all__playlist-item0">
+                                        <i class="fas fa-plus white-color"></i>
+                                        <span class="white-color">Tạo playlist mới</span>
+                                    </li>
+                                </div>
+                                <div class="col l-2-4 m-3 s-6 mobile-margin-bot-10px">
+                                    <li class="option-all__playlist-item">
+                                        <div class="option-all__playlist-item-img-wrapper">
+                                            <div class="option-all__playlist-item-img-wrapper-action">
+                                                <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i>
+                                                <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i>
+                                            </div>
+                                            <div class="option-all__playlist-item-img" style="background-image: url(./img/pt/4.webp);"></div>
+                                        </div>
+                                        <div class="option-all__playlist-item-content">
+                                            <div class="option-all__playlist-item-content-name1 js__main-color">XU HƯỚNG VPOP</div>
+                                            <div class="option-all__playlist-item-content-name2 js__sub-color">#Topmelodyy</div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="col l-2-4 m-3 s-6 mobile-margin-bot-10px">
+                                    <li class="option-all__playlist-item">
+                                        <div class="option-all__playlist-item-img-wrapper">
+                                            <div class="option-all__playlist-item-img-wrapper-action">
+                                                <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i>
+                                                <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i>
+                                            </div>
+                                            <div class="option-all__playlist-item-img" style="background-image: url(./img/pt/2.webp);"></div>
+                                        </div>
+                                        <div class="option-all__playlist-item-content">
+                                            <div class="option-all__playlist-item-content-name1 js__main-color">NGHE NHIỀU</div>
+                                            <div class="option-all__playlist-item-content-name2 js__sub-color">Melodyy</div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="col l-2-4 m-3 s-6 mobile-margin-bot-10px">
+                                    <li class="option-all__playlist-item">
+                                        <div class="option-all__playlist-item-img-wrapper">
+                                            <div class="option-all__playlist-item-img-wrapper-action">
+                                                <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i>
+                                                <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i>
+                                            </div>
+                                            <div class="option-all__playlist-item-img option-all__playlist-item-img-fix" style="background-image: url(./img/hero/3.jpg);"></div>
+                                        </div>
+                                        <div class="option-all__playlist-item-content">
+                                            <div class="option-all__playlist-item-content-name1 js__main-color">GIAI ĐIỆU XƯA</div>
+                                            <div class="option-all__playlist-item-content-name2 js__sub-color">Bolero</div>
+                                        </div>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- discover all__mv -->
+                    <div class="option-all__playlist option-all__margin_bot">
+                        <div class="option-heading option-all__playlist-heading">
+                            <h3 class="option-heading-name js__main-color">MV</h3>
+                            <div class="more-list mobile-hiden">
+                                <span class="js__main-color">Tất cả</span>
+                                <i class="fas fa-chevron-right js__main-color"></i>
+                            </div>
+                        </div>
+                        <ul class="option-all__playlist-list">
+                            <div class="row">
+                                <div class="col l-6 m-6 s-18 mobile-margin-bot-30px">
+                                    <div class="portfolio__item">
+                                        <div class="portfolio__item__video set-bg" data-setbg="img/Work/3.jpg">
+                                            <a href="https://www.youtube.com/watch?v=zoEtcR5EW08" class="play-btn video-popup"><i
+                                                    class="fa fa-play"></i></a>
+                                        </div>
+                                        <div class="portfolio__item__text">
+                                            <h4>Chúng ta của tương lai</h4>
+                                            <ul>
+                                                <li>Sơn Tùng MT-P</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-6 m-6 s-18 mobile-margin-bot-30px">
+                                    <div class="portfolio__item">
+                                        <div class="portfolio__item__video set-bg" data-setbg="img/Work/8.jpg">
+                                            <a href="https://www.youtube.com/watch?v=rwIOCoDtHyI" class="play-btn video-popup"><i
+                                                    class="fa fa-play"></i></a>
+                                        </div>
+                                        <div class="portfolio__item__text">
+                                            <h4>VỤ NỔ LỚN - KHÔNG QUAN TRỌNG</h4>
+                                            <ul>
+                                                <li>MCK ft. ORIJINN, TAGE , JUSTATEE , TRUNG TRẦN
+                                                    CU CHÍNH, CU ĐẠT, HOÀNG VĂNN</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- discpver singer -->
+                    <div class="option-all__playlist option-all__margin_bot">
+                        <div class="option-heading option-all__playlist-heading">
+                            <h3 class="option-heading-name js__main-color">Nghệ Sĩ</h3>
+                            <div class="more-list mobile-hiden">
+                                <span class="js__main-color">Tất cả</span>
+                                <i class="fas fa-chevron-right js__main-color"></i>
+                            </div>
+                        </div>
+                        <ul class="option-all__playlist-list">
+                            <div class="row">
+                                <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                    <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                        <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                            <div class="option-all__playlist-item-img-wrapper-action">
+                                                <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                            </div>
+                                            <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/4.jpg);"></div>
+                                        </div>
+                                        <div class="option-all__playlist-item-content-singer">
+                                            <div class="option-all__playlist-item-content-singer-name1 js__main-color">Mỹ Tâm</div>
+                                            <div class="option-all__playlist-item-content-singer-name2 js__sub-color">757K quan tâm</div>
+                                            <div class="option-all__playlist-item-content-singer-profile">
+                                                <i class="fas fa-random js__main-color"></i>
+                                                <span class="js__main-color">Góc nhạc</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                    <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                        <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                            <div class="option-all__playlist-item-img-wrapper-action">
+                                                <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                            </div>
+                                            <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/2.jpg);"></div>
+                                        </div>
+                                        <div class="option-all__playlist-item-content-singer">
+                                            <div class="option-all__playlist-item-content-singer-name1 js__main-color">Phan Mạnh Quỳnh</div>
+                                            <div class="option-all__playlist-item-content-singer-name2 js__sub-color">381K quan tâm</div>
+                                            <div class="option-all__playlist-item-content-singer-profile">
+                                                <i class="fas fa-random js__main-color"></i>
+                                                <span class="js__main-color">Góc nhạc</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                    <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                        <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                            <div class="option-all__playlist-item-img-wrapper-action">
+                                                <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                            </div>
+                                            <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/3.jpg);"></div>
+                                        </div>
+                                        <div class="option-all__playlist-item-content-singer">
+                                            <div class="option-all__playlist-item-content-singer-name1 js__main-color">HIEUTHUHAI</div>
+                                            <div class="option-all__playlist-item-content-singer-name2 js__sub-color">466K quan tâm</div>
+                                            <div class="option-all__playlist-item-content-singer-profile">
+                                                <i class="fas fa-random js__main-color"></i>
+                                                <span class="js__main-color">Góc nhạc</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="col l-2-4 m-4 s-6 mobile-margin-bot-30px ">
+                                    <li class="option-all__playlist-item option-all__playlist-item-margin_top">
+                                        <div class="option-all__playlist-item-img-wrapper option-all__playlist-item-img-wrapper-mv">
+                                            <div class="option-all__playlist-item-img-wrapper-action">
+                                                <!-- <i class="fas fa-times option-all__playlist-item-img-wrapper-action-icon1"></i> -->
+                                                <i class="fas fa-play option-all__playlist-item-img-wrapper-action-icon2"></i>
+                                                <!-- <i class="fas fa-ellipsis-h option-all__playlist-item-img-wrapper-action-icon3"></i> -->
+                                            </div>
+                                            <div class="option-all__playlist-item-img option-all__playlist-item-img-singer" style="background-image: url(./img/team/1.jpg);"></div>
+                                        </div>
+                                        <div class="option-all__playlist-item-content-singer">
+                                            <div class="option-all__playlist-item-content-singer-name1 js__main-color">Sơn Tùng M-TP</div>
+                                            <div class="option-all__playlist-item-content-singer-name2 js__sub-color">2.2M quan tâm</div>
+                                            <div class="option-all__playlist-item-content-singer-profile">
+                                                <i class="fas fa-random js__main-color"></i>
+                                                <span class="js__main-color">Góc nhạc</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="main-container-zingchart js__container-panes ">
+                    <div class="zingchart__headding js__main-color">
+                        #Topmelodyy
+                    </div>
+                    <ul class="zingchart__list js__zingchart__list"></ul>
+                    <div class="zingchart__100more">
+                        <span class="zingchart__100more-body js__main-color js__border js__zingchart__100more">Xem top 100</span>
+                    </div>
+                    <div class="zingchart-week__headding zingchart__headding js__main-color">Bảng Xếp Hạng Tuần</div>
+                </div>
+
+            </div>
+            <!-- END CONTAINER -->
+
+            <!-- LIST SONG MOBILE -->
+            <!-- <div class="container-mobile">
+                tesst
+            </div> -->
+
+
+            <!-- theme modal -->
+            <!-- theme-modal--avtive -->
+            <div class="theme-modal">
+                <div class="theme-modal__overlay"></div>
+                <div class="theme-modal__body">
+                    <div class="theme-modal__close-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <h3 class="theme-modal__body-headding js__main-color">Giao diện</h3>
+                    <div class="theme-modal__body-group-wrapper">
+                        <div class="theme-modal__body-group">
+                            <span class="theme-modal__body-group-headding js__main-color">Chủ đề</span>
+                            <ul class="theme-modal__body-group-list">
+                                <li class="theme-modal__body-group-item js-theme-item">
+                                    <div class="theme-modal__body-group-item-img-wrapper">
+                                        <div class="theme-modal__body-group-item-img" style="background-image: url(./assets/img/background-theme/modalThemes/modalTheme1/111.png);"></div>
+                                    </div>
+                                    <span class="theme-modal__body-group-item-name js__main-color">Melodyy</span>
+                                </li>
+                                <li class="theme-modal__body-group-item js-theme-item">
+                                    <div class="theme-modal__body-group-item-img-wrapper">
+                                        <div class="theme-modal__body-group-item-img" style="background-image: url(./assets/img/background-theme/modalThemes/modalTheme1/theme4.jpg);"></div>
+                                    </div>
+                                    <span class="theme-modal__body-group-item-name js__main-color">Sáng</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- BEGIN NEXT-SONG -->
+            <div class="main-nextsong mobile-tablet-hiden">
+                <div class="nextsong__option">
+                    <div class="nextsong__option-wrapper">
+                        <!-- nextsong__option-wrapper--active -->
+                        <div class="nextsong__option-wrapper-listplay nextsong__option-wrapper--active js__toast js__main-color">Danh sách phát</div>
+                    </div>
+                </div>
+                <div class="nextsong__box">
+                    <div class="nextsong__fist">
+                        <!-- <div class="nextsong__fist-item nextsong__item">
+                            <div class="nextsong__item-img" style="background-image: url(./assets/img/next-song/0.webp);">
+                                <div class="nextsong__item-playbtn"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="nextsong__item-body">
+                                <span class="nextsong__item-body-heading">Là Ai Từ Bỏ, Là Ai Vô Tình</span>
+                                <span class="nextsong__item-body-depsc">Hương Ly, Jombie</span>
+                            </div>
+                            <div class="nextsong__item-action">
+                                nextsong__item-action-heart--unheart
+                                <span class="nextsong__item-action-heart">
+                                    <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                    <i class="far fa-heart nextsong__item-action-heart-icon2"></i>
+                                </span>
+                                <span class="nextsong__item-action-dot">
+                                    <i class="fas fa-ellipsis-h "></i>
+                                </span>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="nextsong__last">
+                        <h3 class="nextsong__last-heading js__main-color">Tiếp theo</h3>
+                        <ul class="nextsong__last-list">
+                            <!-- <li class="nextsong__last-item nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(./assets/img/next-song/1.webp);">
+                                    <div class="nextsong__item-playbtn"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Yêu Là Cưới</span>
+                                    <span class="nextsong__item-body-depsc">Phát Hồ, X2X</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    nextsong__item-action-heart--unheart
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <i class="far fa-heart nextsong__item-action-heart-icon2"></i>
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>  
+                </div>
+            </div>
+            <!-- END NEXT-SONG -->
+
+            <!-- BEGIN TAB ON MOBILE -->
+            <div class="mobile-tab">
+                <ul class="mobile-tab__list">
+                    <li class="mobile-tab__item active js__mobile-tab__item js__main-color">
+                        <i class="far fa-play-circle"></i>
+                        Thư Viện
+                    </li>
+                    <li class="mobile-tab__item js__mobile-tab__item js__main-color">
+                        <i class="fas fa-compact-disc"></i>
+                        Khám Phá
+                    </li>
+                    <li class="mobile-tab__item js__mobile-tab__item js__main-color">
+                        <i class="fas fa-chart-line"></i>
+                        #Topmelodyy
+                    </li>
+                    <li class="mobile-tab__item js__main-color">
+                        <i class="fas fa-broadcast-tower"></i>
+                        Radio
+                    </li>
+                    <li class="mobile-tab__item js__main-color">
+                        <i class="far fa-list-alt"></i>
+                        Theo Dõi
+                    </li>
+                </ul>
+            </div>
+            <!-- END TAB ON MOBILE -->
+
+            <!-- BEGIN MUSIC CONTROL -->
+            <div class="main-music-control">
+                <div class="row">
+                    <div class="col l-3 m-3 s-8">
+                        <div class="music-control__left">
+                            <div class="music-control__left-img-box">
+                                <div class="music-control__left-img" style="background-image: url(./assets/img/songs/0.webp);"></div>
+                                <!-- <div class="music-control__left-vetinh">
+                                    <svg fill="#fff" viewBox="0 0 512 512" class="img-note vetinh-1">
+                                        <path
+                                            d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z"
+                                        ></path>
+                                    </svg>
+                                    <svg fill="#fff" viewBox="0 0 384 512" class="img-note vetinh-2">
+                                        <path d="M310.94 1.33l-96.53 28.51A32 32 0 0 0 192 60.34V360a148.76 148.76 0 0 0-48-8c-61.86 0-112 35.82-112 80s50.14 80 112 80 112-35.82 112-80V148.15l73-21.39a32 32 0 0 0 23-30.71V32a32 32 0 0 0-41.06-30.67z"></path>
+                                    </svg>
+                                    <svg fill="#fff" viewBox="0 0 512 512" class="img-note vetinh-3">
+                                        <path
+                                            d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z"
+                                        ></path>
+                                    </svg>
+                                    <svg fill="#fff" viewBox="0 0 384 512" class="img-note vetinh-4">
+                                        <path d="M310.94 1.33l-96.53 28.51A32 32 0 0 0 192 60.34V360a148.76 148.76 0 0 0-48-8c-61.86 0-112 35.82-112 80s50.14 80 112 80 112-35.82 112-80V148.15l73-21.39a32 32 0 0 0 23-30.71V32a32 32 0 0 0-41.06-30.67z"></path>
+                                    </svg> 
+                                </div> -->
+                            </div>
+                            
+                            <div class="music-control__left-content">
+                                <span class="music-control__left-content-song js__main-color">Cưới luôn được không</span>
+                                <span class="music-control__left-content-singer js__sub-color">Út nhị Cover</span>
+                            </div>
+                            <div class="music-control__left-action tablet-hiden mobile-hiden">
+                                <!-- music-control__left-action-tym-box-active -->
+                                <div class="music-control__left-action-tym-box">
+                                    <i class="fas fa-heart music-control__left-action-tym"></i>
+                                    <i class="far fa-heart music-control__left-action-tym-non"></i>
+                                </div>
+                                <i class="fas fa-ellipsis-h music-control__left-action-option js__main-color js__toast"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-7 s-4 rs__main-music-control-flex-1">
+                        <div class="music-control__center">
+                            <div class="music-control__center-action music-control__icon">
+                                <!-- music-control__icon-random--active -->
+                                <i class="fas fa-random music-control__icon1 js__music-control__icon1 js__main-color mobile-hiden"></i>
+                                <i class="fas fa-caret-left music-control__icon2 js__music-control__icon2 js__main-color"></i>
+                                <!-- music-control__icon-play--active -->
+                                <div class="music-control__icon-play js__music-control__icon-play">
+                                    <i class="fas fa-play music-control__icon3 js__main-color js__border"></i>
+                                    <i class="fas fa-pause music-control__icon33 js__main-color js__border"></i>
+                                </div>
+                                <i class="fas fa-caret-right music-control__icon4 js__music-control__icon4 js__main-color"></i>
+                                <!-- music-control__icon-repeat--active -->
+                                <i class="fas fa-redo music-control__icon5 js__music-control__icon5 mobile-hiden js__main-color"></i>
+                            </div>
+                            <div class="music-control__progress mobile-hiden">
+                                <span class="music-control__progress-time-start js__music-control__progress-time-start js__main-color">00:00</span>
+                                <input id="progress" class="music-control__progress-input" type="range" value="0" step="1" min="0" max="100">
+                                <!-- <div class="music-control__progress-update">
+                                    <div class="music-control__progress-update-timeline"></div>
+                                </div> -->
+                                <span class="music-control__progress-time-duration js__music-control__progress-time-duration js__main-color">00:00</span>
+                            </div>
+                            <audio id="audio" src="./assets/music/list-song/0.mp3"></audio>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-2 s-0">
+                        <div class="music-control__right">
+                            <i class="music-control__right-icon1 ipad-air-hiden js__main-color js__toast fas fa-photo-video"></i>
+                            <i class="music-control__right-icon2 ipad-air-hiden js__main-color js__toast fas fa-microphone"></i>
+                            <i class="music-control__right-icon3 ipad-air-hiden js__main-color js__toast far fa-square"></i>
+                            <!-- music-control__right--active -->
+                            <div class="music-control__right-volume-icon">
+                                <i class="music-control__right-icon4 js__main-color fas fa-volume-down"></i>
+                                <i class="music-control__right-icon5 js__main-color fas fa-volume-mute"></i>
+                            </div>
+                            <div class="music-control__volume-progress">
+                                <input id="progress1" class="music-control__volume-input" type="range" value="100" step="1" min="0" max="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MUSIC CONTROL -->
+        </div>
+
+        <!-- BEGIN PLAYER ON MOBILE -->
+        <!-- active -->
+        <div class="mobile-player">
+            <div class="mobile-player__headding">
+                <div class="mobile-player__headding-option">
+                    <span class="mobile-player__headding-option-item">ĐANG PHÁT</span>
+                </div>
+                <div class="mobile-player__headding-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="mobile-player__body">
+                <div class="mobile-player__body-thumb" style="background-image: url(./assets/img/songs/0.webp);"></div>
+                <div class="mobile-player__body-now">
+                    <span class="mobile-player__body-now-name">Tình Yêu Ngủ Quên</span>
+                    <span class="mobile-player__body-now-singer">Hoàng Tôn, LyHan, Orinn Remix</span>
+                    <span class="mobile-player__body-now-extra">Remix Version</span>
+                </div>
+            </div>
+            <div class="mobile-player__ctrl">
+                <div class="music-control__center-action music-control__icon">
+                    <!-- music-control__icon-random--active -->
+                    <i class="fas fa-random music-control__icon1 mobile-player__ctrl-icon js__mobile-player__ctrl-icon1"></i>
+                    <i class="fas fa-caret-left music-control__icon2 mobile-player__ctrl-icon js__mobile-player__ctrl-icon2"></i>
+                    <!-- music-control__icon-play--active -->
+                    <div class="music-control__icon-play mobile-player__ctrl-icon js__mobile-player__ctrl-icon">
+                        <i class="fas fa-play music-control__icon3"></i>
+                        <i class="fas fa-pause music-control__icon33"></i>
+                    </div>
+                    <i class="fas fa-caret-right music-control__icon4 mobile-player__ctrl-icon js__mobile-player__ctrl-icon4"></i>
+                    <!-- music-control__icon-repeat--active -->
+                    <i class="fas fa-redo music-control__icon5 mobile-player__ctrl-icon js__mobile-player__ctrl-icon5"></i>
+                </div>
+                <div class="music-control__progress mobile-player__ctrl-progress">
+                    <span class="music-control__progress-time-start mobile-player__ctrl-progress-time-start">00:00</span>
+                    <input id="progress2" class="music-control__progress-input mobile-player__ctrl-progress-input" type="range" value="0" step="1" min="0" max="100">
+                    <span class="music-control__progress-time-duration mobile-player__ctrl-progress-time-duration">00:00</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- END PLAYER ON MOBILE -->
+
+
+    </div>
+
+
+    <div id="toast">
+        
+    </div>
+</section>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="./assets/javascript/main.js"></script>
+    
+</body>
+</html>
